@@ -1,0 +1,45 @@
+@SimpleAPI_HostAddress = http://localhost:5250
+
+GET {{SimpleAPI_HostAddress}}/api/users
+Accept: application/json
+X-API-KEY: YOUR_SECRET_KEY
+
+
+###
+
+GET {{SimpleAPI_HostAddress}}/api/users/1
+Accept: application/json
+X-API-KEY: YOUR_SECRET_KEY
+
+###
+
+POST {{SimpleAPI_HostAddress}}/api/users
+Content-Type: application/json
+X-API-KEY: YOUR_SECRET_KEY
+
+{
+  "name": "John Doe",
+  "email": "johndoe@example.com"
+}
+
+###
+
+
+PUT {{SimpleAPI_HostAddress}}/api/users/1
+Content-Type: application/json
+X-API-KEY: YOUR_SECRET_KEY
+
+{
+  "id": 1,
+  "name": "Updated Name",
+  "email": "updated@example.com"
+}
+
+
+
+###
+
+DELETE {{SimpleAPI_HostAddress}}/api/users/1
+X-API-KEY: YOUR_SECRET_KEY
+
+###
